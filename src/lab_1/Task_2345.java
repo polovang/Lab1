@@ -75,7 +75,18 @@ public class Task_2345 {
 		}
 		return builder.toString();
 	}
-
+	
+	//Task_3 Expanding the problem in Task 3 so that the program can encrypt and decrypt a given text including numbers and characters.
+    public String encryptText(String input) {
+          StringBuilder builder = new StringBuilder();
+  		for (int i = 0; i < input.length(); i++) {
+			char a = input.charAt(i);
+			char b = encryptChar(a);
+			builder.append(b);
+  		}
+  		return builder.toString();
+    
+    }
 	//task_5 Encrypt and Decrypt the text content in the srcfile and save it into desFile.
 	public void encrypt(String srcFile, String desFile) {
 	    try (BufferedReader reader = new BufferedReader(new FileReader(srcFile));
@@ -136,6 +147,10 @@ public class Task_2345 {
 		System.out.println(ouput4);
 		
 		//Test Task_3
+		System.out.println("---");
+		Task_2345 task_5 = new Task_2345(4);
+		String ouput5 = task_5.encrypt("NGUYEN56");
+		System.out.println(ouput5);
 		
 		//Test Task_5
 		System.out.println("---");
