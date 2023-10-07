@@ -14,8 +14,9 @@ public class OrderTest {
 		
 		OrderItem [] items = {item1,item2,item3};
 		Order order = new Order(items);
-       
-       
+		System.out.print("Tong gia:");
+       System.out.println(order.cost());
+       order.contains(p3);
 	}
 
 }
