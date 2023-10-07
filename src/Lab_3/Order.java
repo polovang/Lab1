@@ -14,5 +14,12 @@ public class Order {
 	        }
 	        return totalCost;
 	    }
+	    public boolean contains(Product p) {
+	    	return false;
+	    }
+	    public Product[] filter(String type) {
+	    	return null;
+	    }
+	
 	}
 

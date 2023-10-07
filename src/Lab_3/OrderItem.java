@@ -11,5 +11,13 @@ public class OrderItem {
 	public double getItemCost() {
 		return p.getPrice()*quantity;
 	}
+	@Override
+	public String toString() {
+		return "OrderItem:" + p + ", quantity:" + quantity + "\n";
+	}
+	public Product getProduct() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

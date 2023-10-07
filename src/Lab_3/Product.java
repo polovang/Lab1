@@ -16,4 +16,19 @@ public class Product {
 	public double getPrice() {
 		return price;
 	}
+
+	public String getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getType() {
+		return type;
+	}
+	
+	
 }
+	

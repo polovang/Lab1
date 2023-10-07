@@ -1,5 +1,7 @@
 package Lab_3;
 
+import java.util.Arrays;
+
 public class Task_1 {
 	private int[] array;
 
@@ -38,7 +40,7 @@ public class Task_1 {
 
 	// Task1_2
 	public int iterrativeBinarySearch(int target) {
-
+        Arrays.sort(array);
 		int left = 0;
 		int right = array.length - 1;
 		while (left <= right) {
@@ -56,6 +58,7 @@ public class Task_1 {
 	}
 
 	public int recuriveBinarySearch(int target, int left, int right) {
+		   Arrays.sort(array);
 		int mid = (left + right) / 2;
 		if (left > right) {
 			return -1;
@@ -83,11 +86,11 @@ public class Task_1 {
 		int re1 = task_1.recursiveLinearSearch1(45);
 		System.out.println(re1);
 
-		int[] array1 = { 2, 9, 10, 23, 12, 5, 45 };
+		int[] array1 = { 5,23,5,23,1,8,19 };
 		task_1 = new Task_1(array1);
-		int re2 = task_1.iterrativeBinarySearch(9);
+		int re2 = task_1.iterrativeBinarySearch(23);
 		System.out.println(re2);
-		int re3 = task_1.recuriveBinarySearch1(9);
+		int re3 = task_1.recuriveBinarySearch1(23);
 		System.out.println(re3);
 	}
 }
