@@ -24,7 +24,7 @@ public class Order {
 			@Override
 			public int compare(OrderItem o1, OrderItem o2) {
 
-				return o1.getProduct().getId().compareTo(o2.getProduct().getId());
+				return o1.getP().getId().compareTo(o2.getP().getId());
 
 			}
 		});
@@ -32,13 +32,14 @@ public class Order {
 		int right = items.length - 1;
 		while (left <= right) {
 			int mid = (left + right) / 2;
-			int re = items[mid].getProduct().getId().compareTo(p.getId());
+			int re = items[mid].getP().getId().compareTo(p.getId());
+		
 			if (re == 0) {
 				return true;
 			} else if (re < 0) {
-				mid = left + 1;
+				left = mid + 1;
 			} else {
-				mid = right - 1;
+				right = mid - 1;
 			}
 		}
 		return false;

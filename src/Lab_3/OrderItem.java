@@ -8,6 +8,15 @@ public class OrderItem {
 		this.p = p;
 		this.quantity = quantity;
 	}
+	
+	public Product getP() {
+		return p;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
 	public double getItemCost() {
 		return p.getPrice()*quantity;
 	}
