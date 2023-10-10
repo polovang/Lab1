@@ -1,5 +1,6 @@
 package Lab_3;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -46,7 +47,13 @@ public class Order {
 	}
 
 	public Product[] filter(String type) {
-		return null;
+	        ArrayList< Product> arrayList = new ArrayList<>();
+	        for(OrderItem item : items) {
+	        	if(item.getP().getType().equals(type)) {
+	        		arrayList.add(item.getP());
+	        	}
+	        }
+	        return arrayList.toArray(new Product[arrayList.size()]);
 	}
 
 }
