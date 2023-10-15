@@ -1,4 +1,4 @@
-package Lab4;import java.util.Arrays;
+package Lab_4;import java.util.Arrays;
 
 public class Task_2 {
 	//Task2_1

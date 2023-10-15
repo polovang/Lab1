@@ -1,4 +1,4 @@
-package Lab4;
+package Lab_4;
 
 import java.sql.Array;
 import java.util.Arrays;
