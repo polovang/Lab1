@@ -51,52 +51,26 @@ public class Task_2_4 {
 	}
 
 	public boolean checkDiagonals() {
-		for (int i = 0; i < board.length; i++) {
+	    boolean checkLeftDiagonal = true;
+	    boolean checkRightDiagonal = true;
 
-			if (board[0][0] != EMPTY) {
-				boolean check = true;
+	    // Check left diagonal
+	    for (int i = 1; i < board.length; i++) {
+	        if (board[i][i] != board[0][0] || board[0][0] == EMPTY) {
+	            checkLeftDiagonal = false;
+	            break;
+	        }
+	    }
 
-				for (int j = 0; j < board.length; j++) {
-					if (i - j == 0) {
-						if (board[i][j] != board[0][0]) {
-							check = false;
-							break;
+	    // Check right diagonal
+	    for (int i = 1; i < board.length; i++) {
+	        if (board[i][board.length - 1 - i] != board[0][board.length - 1] || board[0][board.length - 1] == EMPTY) {
+	            checkRightDiagonal = false;
+	            break;
+	        }
+	    }
 
-						}
-
-					}
-
-				}
-				if (check) {
-					return true;
-				}
-
-			}
-		}
-		for (int i = 0; i < board.length; i++) {
-
-			if (board[0][board.length - 1] != EMPTY) {
-				boolean check1 = true;
-
-				for (int j = 0; j < board.length; j++) {
-					if (i + j == board.length - 1) {
-						if (board[i][j] != board[0][board.length - 1]) {
-							check1 = false;
-							break;
-
-						}
-
-					}
-
-				}
-				if (check1) {
-					return true;
-				}
-
-			}
-
-		}
-		return false;
+	    return checkLeftDiagonal || checkRightDiagonal;
 	}
 
 	public static void main(String[] args) {
