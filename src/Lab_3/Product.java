@@ -1,4 +1,4 @@
-package Lab_3;
+package lab3;
 
 public class Product {
 	private String id;
@@ -28,6 +28,12 @@ public class Product {
 	public String getType() {
 		return type;
 	}
+
+	@Override
+	public String toString() {
+		return "Product :" + id + ", name:" + name + ", price:" + price + ", type:" + type ;
+	}
+	
 	
 	
 }

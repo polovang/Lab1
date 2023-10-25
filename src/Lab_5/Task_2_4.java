@@ -72,7 +72,6 @@ public class Task_2_4 {
 
 	    return checkLeftDiagonal || checkRightDiagonal;
 	}
-
 	public static void main(String[] args) {
 		Task_2_4 task_2_4 = new Task_2_4(4);
 		task_2_4.board[0][0] = '0';

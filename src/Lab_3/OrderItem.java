@@ -1,4 +1,4 @@
-package Lab_3;
+package lab3;
 
 public class OrderItem {
 	private Product p;
@@ -22,7 +22,7 @@ public class OrderItem {
 	}
 	@Override
 	public String toString() {
-		return "OrderItem:" + p + ", quantity:" + quantity + "\n";
+		return "OrderItem:" + p.toString() + ", quantity:" + quantity + "\n";
 	}
 	public Product getProduct() {
 		// TODO Auto-generated method stub

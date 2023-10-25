@@ -1,4 +1,4 @@
-package Lab_3;
+package lab3;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,7 +30,7 @@ public class Order {
 			}
 		});
 		int left = 0;
-		int right = items.length - 1;
+		int right = items.length-1;
 		while (left <= right) {
 			int mid = (left + right) / 2;
 			int re = items[mid].getP().getId().compareTo(p.getId());
@@ -55,5 +55,5 @@ public class Order {
 	        }
 	        return arrayList.toArray(new Product[arrayList.size()]);
 	}
-
+	
 }
