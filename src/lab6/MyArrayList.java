@@ -117,9 +117,13 @@ public class MyArrayList<E> {
 
 	}
 
-//	public MyArraylist<E> clone() {
-//
-//	}
+	public ArrayList<E> clone() {
+   ArrayList<E>cloneList= new ArrayList<>();
+   for(int i =0;i<size;i++) {
+	   cloneList.add(elements[i]);
+   }
+   return cloneList;
+	}
 
 	public boolean contains(E o) {
 		for (int i = 0; i < size - 1; i++) {
@@ -160,37 +164,39 @@ public class MyArrayList<E> {
         list.add("Banana");
         list.add("Orange");
 
-        System.out.println("Size: " + list.size()); // Expected output: Size: 3
+        System.out.println("Size: " + list.size()); 
 
         // Test get
-        System.out.println("Element at index 1: " + list.get(1)); // Expected output: Element at index 1: Banana
+        System.out.println("Element at index 1: " + list.get(1)); 
 
         // Test set
         list.set(2, "Grapes");
-        System.out.println("Updated element at index 2: " + list.get(2)); // Expected output: Updated element at index 2: Grapes
+        System.out.println("Updated element at index 2: " + list.get(2)); 
 
         // Test add at index
         list.add(0, "Mango");
-        System.out.println("Element at index 0 after adding: " + list.get(0)); // Expected output: Element at index 0 after adding: Mango
-
+        System.out.println("Element at index 0 after adding: " + list.get(0)); 
         // Test remove
         String removedElement = list.remove(1);
-        System.out.println("Removed element at index 1: " + removedElement); // Expected output: Removed element at index 1: Banana
+        System.out.println("Removed element at index 1: " + removedElement);
 
         // Test contains
-        System.out.println("Contains 'Grapes': " + list.contains("Grapes")); // Expected output: Contains 'Grapes': true
-
+        System.out.println("Contains 'Grapes': " + list.contains("Grapes")); 
         // Test indexOf
-        System.out.println("Index of 'Mango': " + list.indexOf("Mango")); // Expected output: Index of 'Mango': 0
+        System.out.println("Index of 'Mango': " + list.indexOf("Mango")); 
 
         // Test lastIndexOf
-        System.out.println("Last index of 'Mango': " + list.lastIndexOf("Mango")); // Expected output: Last index of 'Mango': 0
-
+        System.out.println("Last index of 'Mango': " + list.lastIndexOf("Mango"));
+        
+        //Test clone
+        ArrayList<String>newList=list.clone();
+        System.out.println("List after clone:"+newList);
+        
         // Test clear and isEmpty
         list.clear();
-        System.out.println("Size after clear: " + list.size()); // Expected output: Size after clear: 0
-        System.out.println("Is list empty: " + list.isEmpty()); // Expected output: Is list empty: true
-
+        System.out.println("Size after clear: " + list.size());
+        System.out.println("Is list empty: " + list.isEmpty()); 
+       
         // Test sort
         MyArrayList<Integer> numberList = new MyArrayList<>();
         numberList.add(5);
@@ -198,7 +204,7 @@ public class MyArrayList<E> {
         numberList.add(8);
 
         numberList.sort(Comparator.naturalOrder());
-        System.out.println("Sorted list: " + Arrays.toString(numberList.toArray())); // Expected output: Sorted list: [2, 5, 8]
+        System.out.println("Sorted list: " + Arrays.toString(numberList.toArray()));
 		
 	}
 }

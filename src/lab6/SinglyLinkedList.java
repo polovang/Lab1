@@ -92,8 +92,11 @@ public class SinglyLinkedList<E> {
 			tail = checkElement;
 
 			size--;
-
+           if(isEmpty()) {
+        	   head=null;
+           }
 		}
+		
 		return removeElement;
 
 	}
