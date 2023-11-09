@@ -1,4 +1,4 @@
-18130006        Trong   Nguyen	1997	7.5
+18130006	Trong	Nguyen	1997	7.5
 18130090	Phi	Hoang	1997	5.5
 18130086	An	Ly	1998	8.5
 18130024	Anh	Pham	1998	9.5
