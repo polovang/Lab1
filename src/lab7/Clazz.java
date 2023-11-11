@@ -107,7 +107,7 @@ public class Clazz {
 		clazz.loadStudent("fol/Student.txt");
 		System.out.println("N student has GPA hightest");
 		System.out.println(clazz.getTopNStudents(2));
-		System.out.println("Student has year");
+		System.out.println("Take student has year");
 		System.out.println(clazz.getStudentByBirthYear(1993));
 		
 	}
