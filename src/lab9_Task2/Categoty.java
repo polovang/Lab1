@@ -91,17 +91,6 @@ public class Categoty {
 		}
 	}
 
-	public int countByYear(int year) {
-		int count = 0;
-		for (Publications lPublications : list) {
-			if (lPublications.getYear() == year) {
-				count += 1;
-			}
-
-		}
-		return count;
-	}
-
 	public Map<Integer, Integer> quanlitPublication() {
 		Map<Integer, Integer> map = new TreeMap<>();
 		for (Publications liPublications : list) {
@@ -112,3 +101,5 @@ public class Categoty {
 	}
 
 }
+
+	
