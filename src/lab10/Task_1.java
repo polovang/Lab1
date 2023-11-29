@@ -53,7 +53,7 @@ public class Task_1 {
 			}
 
 			if (Character.isDigit(ch)) {
-				// Extract the operand
+
 				int operand = 0;
 				while (i < expression.length() && Character.isDigit(ch)) {
 					operand = operand * 10 + (ch - '0');
@@ -66,17 +66,17 @@ public class Task_1 {
 
 				operandStack.push(operand);
 			} else if (ch == '(') {
-				// Push the open parenthesis onto the operator stack
+
 				operatorStack.push(ch);
 			} else if (ch == ')') {
-				// Evaluate the expression within the parentheses
+
 				while (operatorStack.peek() != '(') {
 					int result = applyOperator(operatorStack.pop(), operandStack.pop(), operandStack.pop());
 					operandStack.push(result);
 				}
-				operatorStack.pop(); // Pop the open parenthesis
+				operatorStack.pop();
 			} else if (isOperator(ch)) {
-				// Process operators
+
 				while (!operatorStack.empty() && operatorPrecedence(operatorStack.peek()) >= operatorPrecedence(ch)) {
 					int result = applyOperator(operatorStack.pop(), operandStack.pop(), operandStack.pop());
 					operandStack.push(result);
